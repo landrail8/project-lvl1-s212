@@ -17,7 +17,7 @@ check-types:
 		npm run flow
 
 lint:
-		npm run eslint .
+		npm run eslint
 
 publish:
 		npm publish
