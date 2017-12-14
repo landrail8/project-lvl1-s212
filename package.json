@@ -1,27 +1,46 @@
 {
   "name": "mindgameshexlet",
-  "version": "1.0.4",
-  "description": "my first js project",
-  "main": "index.js",
+  "version": "1.0.5",
+  "description": "Mind Games on JS",
+  "main": "dist/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
   "directories": {
     "lib": "lib"
   },
+  "engines": {
+    "node": "8"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "babel-node": "babel-node",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint"
+  },
+  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/landrail8/project-lvl1-s212.git"
   },
   "author": "madgambler",
   "license": "ISC",
+  "bugs": {
+  "url": "https://github.com/landrail8/project-lvl1-s212/issues"
+  },
+  "homepage": "https://github.com/landrail8/project-lvl1-s212#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1"
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
     "readline-sync": "^1.4.7"
