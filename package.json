@@ -1,6 +1,6 @@
 {
   "name": "mindgameshexlet",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Mind Games on JS",
   "main": "dist/index.js",
   "bin": {
@@ -23,13 +23,13 @@
     "eslint": "eslint"
   },
   "repository": {
-  "type": "git",
-  "url": "git+https://github.com/landrail8/project-lvl1-s212.git"
+    "type": "git",
+    "url": "git+https://github.com/landrail8/project-lvl1-s212.git"
   },
   "author": "madgambler",
   "license": "ISC",
   "bugs": {
-  "url": "https://github.com/landrail8/project-lvl1-s212/issues"
+    "url": "https://github.com/landrail8/project-lvl1-s212/issues"
   },
   "homepage": "https://github.com/landrail8/project-lvl1-s212#readme",
   "devDependencies": {
@@ -40,6 +40,8 @@
     "babel-eslint": "^8.0.3",
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.40.1",
+    "eslint-plugin-jest": "^21.4.2",
     "eslint-plugin-import": "^2.8.0"
   },
   "dependencies": {
