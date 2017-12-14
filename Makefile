@@ -3,11 +3,8 @@ install: install-deps #install-flow-typed
 install-deps:
 		npm install
 
-#install-flow-typed:
-#	npm run flow-typed install
-
 start:
-	npm run babel-node -- /usr/prj/src/bin/brain-games.js
+	npm run babel-node -- /src/bin/brain-games.js
 
 build:
 		rm -rf dist

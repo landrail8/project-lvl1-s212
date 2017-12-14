@@ -1,6 +1,6 @@
 {
   "name": "mindgameshexlet",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "my first js project",
   "main": "index.js",
   "bin": {
