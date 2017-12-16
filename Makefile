@@ -4,7 +4,7 @@ install-deps:
 		npm install
 
 start:
-	npm run babel-node -- /usr/prj/src/bin/brain-even.js
+	npm run babel-node -- /usr/prj/src/bin/playgame.js
 
 build:
 		rm -rf dist

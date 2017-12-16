@@ -2,10 +2,11 @@
   "name": "mindgameshexlet",
   "version": "1.0.12",
   "description": "Mind Games on JS",
-  "main": "dist/index.js",
+  "main": "dist/bin/index.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "directories": {
     "lib": "lib"
