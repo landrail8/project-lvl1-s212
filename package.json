@@ -1,6 +1,6 @@
 {
   "name": "mindgameshexlet",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Mind Games on JS",
   "main": "dist/bin/index.js",
   "bin": {
