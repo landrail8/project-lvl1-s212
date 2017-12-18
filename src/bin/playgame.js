@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+/* import readlineSync from 'readline-sync';
 import brain_calc from '../games/brain-calc';
 import brain_even from '../games/brain-even';
 import brain_gcd from '../games/brain-gcd';
@@ -21,7 +21,7 @@ console.log('Welcome to the Brain Games!');
 console.log('We have something interesting for you ;)');
 
 
-const arrgame = walkForFiles('/usr/prj/src/games');// ../games'); //  ['0. brain-even', '1. brain-calc', '2. brain-gcd'];
+const arrgame = walkForFiles('/usr/prj/src/games');
 let i = 0;
 //  const { arrgame: length } = { arrgame };
 
@@ -49,6 +49,6 @@ switch (numberGame) {
     break;
   default:
     brain_calc();
-}
+} */
 
 //  import index from '..';
