@@ -4,7 +4,7 @@ install-deps:
 		npm install
 
 start:
-	npm run babel-node -- /usr/prj/src/games/brain-gcd.js
+	npm run babel-node -- /usr/prj/src/games/brain-balance.js
 
 build:
 		rm -rf dist
