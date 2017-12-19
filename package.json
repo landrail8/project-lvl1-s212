@@ -1,10 +1,10 @@
 {
   "name": "mindgameshexlet",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Mind Games on JS",
   "main": "dist/bin/index.js",
   "bin": {
-    "brain-games": "dist/bin/brain-games.js",
+    "brain-games": "dist/bin/brain-gcd.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-calc": "dist/bin/brain-calc.js",
     "brain-balance": "dist/bin/brain-balance.js"
