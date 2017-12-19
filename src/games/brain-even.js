@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 import startGame from '../bin/index';
 
 const constrQuestion = () => {
@@ -6,7 +6,7 @@ const constrQuestion = () => {
   const max = 100;
 
   const current = Math.floor(Math.random() * (max - min));
-  const curQuestion = `Question: ${current}`;
+  const curQuestion = `${current}`;
 
   let curAnswer = '';
   if (current % 2 === 1) {
@@ -20,6 +20,7 @@ const constrQuestion = () => {
 };
 
 export default () => {
-  const gameTitle = 'Brain Even \n Answer "yes" if number even otherwise answer "no".';
-  startGame(gameTitle, constrQuestion);
+  const gameTitle = 'Brain Even';
+  const gameRules = 'Answer "yes" if number even otherwise answer "no".';
+  startGame(gameTitle, gameRules, constrQuestion);
 };

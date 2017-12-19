@@ -1,10 +1,10 @@
-#!/usr/bin/env node
 
 import readlineSync from 'readline-sync';
 
-export default (gameTitle, constrQuestion) => {
+export default (gameTitle, gameRules, constrQuestion) => {
   const countQuestions = 3;
   console.log(gameTitle);
+  console.log(gameRules);
 
   const actualname = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${actualname}`);
@@ -15,7 +15,7 @@ export default (gameTitle, constrQuestion) => {
     const answerQuestion = constrQuestion();
 
     if (countFaults === 0) {
-      console.log(answerQuestion.question);
+      console.log(`Question: ${answerQuestion.question}`);
 
       const answer = readlineSync.question('Your answer: ');
       if (answer !== answerQuestion.answer) {

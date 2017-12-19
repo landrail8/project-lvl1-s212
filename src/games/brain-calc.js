@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 import startGame from '../bin/index';
 
 const constrQuestion = () => {
@@ -27,12 +27,13 @@ const constrQuestion = () => {
       rightNumber = currentFirstNumber + currentSecondNumber;
   }
 
-  const curQuestion = `Question: ${currentFirstNumber}${arrOperations[currentOperation]}${currentSecondNumber}`;
+  const curQuestion = `${currentFirstNumber}${arrOperations[currentOperation]}${currentSecondNumber}`;
   const curAnswer = rightNumber.toString();
   return { question: curQuestion, answer: curAnswer };
 };
 
 export default () => {
-  const gameTitle = 'Brain Calc \n What is the result of the expression?';
-  startGame(gameTitle, constrQuestion);
+  const gameTitle = 'Brain Calc';
+  const gameRules = 'What is the result of the expression?';
+  startGame(gameTitle, gameRules, constrQuestion);
 };

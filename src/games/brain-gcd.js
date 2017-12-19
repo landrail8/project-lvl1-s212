@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 import startGame from '../bin/index';
 
 const GSD = (n, m) => {
@@ -16,7 +16,7 @@ const constrQuestion = () => {
   const currentFirstNumber = Math.floor(Math.random() * (max - min));
   const currentSecondNumber = Math.floor(Math.random() * (max - min));
 
-  const curQuestion = `Question: ${currentFirstNumber}  ${currentSecondNumber}`;
+  const curQuestion = `${currentFirstNumber}  ${currentSecondNumber}`;
   const curAnswer = GSD(currentFirstNumber, currentSecondNumber).toString();
 
 
@@ -24,6 +24,7 @@ const constrQuestion = () => {
 };
 
 export default () => {
-  const gameTitle = 'Brain GSD \n Find the greatest common divisor of given numbers.';
-  startGame(gameTitle, constrQuestion);
+  const gameTitle = 'Brain GSD';
+  const gameRules = 'Find the greatest common divisor of given numbers.';
+  startGame(gameTitle, gameRules, constrQuestion);
 };

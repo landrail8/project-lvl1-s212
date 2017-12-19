@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+
 import startGame from '../bin/index';
 
 const constrQuestion = () => {
@@ -32,12 +32,13 @@ const constrQuestion = () => {
   }
 
   const curAnswer = arr.sort().join('');
-  const curQuestion = `Question: ${currentNumber}`;
+  const curQuestion = `${currentNumber}`;
 
   return { question: curQuestion, answer: curAnswer };
 };
 
 export default () => {
-  const gameTitle = 'Brain Balance \n Balance the given number.';
-  startGame(gameTitle, constrQuestion);
+  const gameTitle = 'Brain Balance';
+  const gameRules = 'Balance the given number.';
+  startGame(gameTitle, gameRules, constrQuestion);
 };
