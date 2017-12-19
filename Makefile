@@ -4,7 +4,7 @@ install-deps:
 		npm install
 
 start:
-	npm run babel-node -- /usr/prj/src/bin/brain-progression.js
+	npm run babel-node -- /usr/prj/src/bin/brain-prime.js
 
 build:
 		rm -rf dist
