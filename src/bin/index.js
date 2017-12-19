@@ -2,32 +2,34 @@
 
 import readlineSync from 'readline-sync';
 
-export default (gameTitle, arrQuest) => {
+export default (gameTitle, constrQuestion) => {
+  const countQuestions = 3;
   console.log(gameTitle);
 
   const actualname = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${actualname}`);
 
-  const sumFaults = arrQuest.reduce((countFaults, currentValue) => {
-    let thisFault = 0;
+  let i = 1;
+  let countFaults = 0;
+  while (i <= countQuestions) {
+    const answerQuestion = constrQuestion();
 
     if (countFaults === 0) {
-      console.log(currentValue.question);
+      console.log(answerQuestion.question);
 
       const answer = readlineSync.question('Your answer: ');
-      if (answer !== currentValue.rightAnswer) {
-        console.log(`${answer} is wrong answer ;(. Correct answer was ${currentValue.rightAnswer}.`);
-        thisFault = 1;
+      if (answer !== answerQuestion.answer) {
+        console.log(`${answer} is wrong answer ;(. Correct answer was ${answerQuestion.answer}.`);
+        countFaults += 1;
+        break;
       } else {
         console.log('Correct!');
       }
-    } else {
-      thisFault = 1;
     }
-    return thisFault;
-  }, 0);
+    i += 1;
+  }
 
-  if (sumFaults === 0) {
+  if (countFaults === 0) {
     console.log(`Congratulations, ${actualname}`);
   } else {
     console.log(`Let's try again, ${actualname}`);

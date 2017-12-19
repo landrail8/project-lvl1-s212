@@ -1,17 +1,10 @@
 #!/usr/bin/env node
 import startGame from '../bin/index';
 
-const gameTitle = 'Brain Balance \n Balance the given number.';
-const arrQuest = [];
+const constrQuestion = () => {
+  const min = 101;
+  const max = 999;
 
-const countQuestions = 3;
-
-let i = 1;
-
-const min = 101;
-const max = 999;
-
-while (i <= countQuestions) {
   const currentNumber = Math.floor(Math.random() * (max - min));
 
   const arr = currentNumber.toString().split('').map(x => Number(x));
@@ -38,10 +31,13 @@ while (i <= countQuestions) {
     }
   }
 
-  const rightNumber = arr.sort().join('');
-  arrQuest.push({ question: `Question: ${currentNumber}`, rightAnswer: rightNumber });
+  const curAnswer = arr.sort().join('');
+  const curQuestion = `Question: ${currentNumber}`;
 
-  i += 1;
-}
+  return { question: curQuestion, answer: curAnswer };
+};
 
-startGame(gameTitle, arrQuest);
+export default () => {
+  const gameTitle = 'Brain Balance \n Balance the given number.';
+  startGame(gameTitle, constrQuestion);
+};

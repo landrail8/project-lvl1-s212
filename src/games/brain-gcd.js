@@ -9,23 +9,21 @@ const GSD = (n, m) => {
   return Math.abs(n);
 };
 
-const gameTitle = 'Brain GSD \n Find the greatest common divisor of given numbers.';
-const arrQuest = [];
+const constrQuestion = () => {
+  const min = 1;
+  const max = 100;
 
-const countQuestions = 3;
-
-const min = 1;
-const max = 100;
-
-let i = 1;
-while (i <= countQuestions) {
   const currentFirstNumber = Math.floor(Math.random() * (max - min));
   const currentSecondNumber = Math.floor(Math.random() * (max - min));
-  const rightNumber = GSD(currentFirstNumber, currentSecondNumber);
 
-  arrQuest.push({ question: `Question: ${currentFirstNumber}  ${currentSecondNumber}`, rightAnswer: rightNumber.toString() });
+  const curQuestion = `Question: ${currentFirstNumber}  ${currentSecondNumber}`;
+  const curAnswer = GSD(currentFirstNumber, currentSecondNumber).toString();
 
-  i += 1;
-}
 
-startGame(gameTitle, arrQuest);
+  return { question: curQuestion, answer: curAnswer };
+};
+
+export default () => {
+  const gameTitle = 'Brain GSD \n Find the greatest common divisor of given numbers.';
+  startGame(gameTitle, constrQuestion);
+};

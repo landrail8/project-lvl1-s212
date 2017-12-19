@@ -4,7 +4,7 @@ install-deps:
 		npm install
 
 start:
-	npm run babel-node -- /usr/prj/src/bin/brain-calc.js
+	npm run babel-node -- /usr/prj/src/bin/brain-gcd.js
 
 build:
 		rm -rf dist
